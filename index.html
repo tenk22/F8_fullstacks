@@ -4,11 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+        a {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+    </style>
   </head>
   <body>
-    <a href="https://tenk22.github.io/F8_fullstacks//btvnb2/b1.html">bt1</a>
-    <a href="https://tenk22.github.io/F8_fullstacks//btvnb2/b2.html">bt2</a>
-    <a href="https://tenk22.github.io/F8_fullstacks//btvnb2/b3.html">bt3</a>
-    <a href="https://tenk22.github.io/F8_fullstacks//btvnb2/b4.html">bt4</a>
+    <script>
+      const baseUrl = "https://tenk22.github.io/F8_fullstacks";
+      const basePath = "/btvnb";
+      const slotLearn = 2;
+      const totalExercise = 4;
+      function createLinks() {
+        for (let i = 1; i <= totalExercise; i++) {
+          let link = document.createElement("a");
+          link.id = `link${i}`;
+          link.href = `${baseUrl}${basePath}${slotLearn}/b${i}.html`;
+          link.textContent = `bài tập ${i}`;
+          document.body.appendChild(link);
+        }
+      }
+      createLinks();
+      const originUrl = window.location.origin;
+      console.log(originUrl);
+    </script>
   </body>
 </html>
