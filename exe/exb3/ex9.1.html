@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="name">ho va ten</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="ho ten.."
+          value=""
+          required
+        />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="email.."
+          value=""
+          required
+        />
+      </div>
+      <div>
+        <label for="password">mat khau</label>
+        <input
+          type="text"
+          id="password"
+          name="password"
+          placeholder="mat khau.."
+          value=""
+          required
+        />
+      </div>
+      <div>
+        <label for="age">tuoi</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          placeholder="tuoi.."
+          value=""
+          min="18"
+          max="50"
+          step="0.1"
+          required
+        />
+      </div>
+      <div>
+        <label for="avatar">avatar</label>
+        <input type="file" id="avatar" name="avatar" multiple />
+      </div>
+      <div>
+        <label for="sreach">tim</label>
+        <input
+          type="search"
+          id="tim"
+          name="tim"
+          placeholder="tim..."
+          multiple
+        />
+      </div>
+      <div>
+        <label for="date">date</label>
+        <input type="date" id="date" name="date" />
+      </div>
+      <div>
+        <label>so thich</label>
+        <label for="">nghe nhac</label>
+        <input type="checkbox" id="nghe nhac" name="nghe nhac" />
+      </div>
+      <div>
+        <label for="message">tin nhan</label>
+        <textarea
+          name="message"
+          id="massage"
+          name="massage"
+          placeholder="tin nhan.."
+          cols="30"
+          rows="10"
+        ></textarea>
+        <div>
+          <label for="province">tinh/thanh pho</label>
+          <select name="province" id="province">
+            <option value="0">chon tinh/thanh pho</option>
+            <option value="1">ha noi</option>
+            <option value="2" selected>da nang</option>
+            <option value="3">ho chi minh</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit">submit</button>
+      <button type="reset">reset</button>
+    </form>
+  </body>
+</html>

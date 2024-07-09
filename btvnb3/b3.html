@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="b3.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+          <label for="city">City of <br />Employment:</label>
+          <input type="text" id="city" name="city" />
+        </div>
+        <div class="form-group">
+          <label for="server">Web server:</label>
+          <select id="server" name="server">
+            <option value="">--Choose a server--</option>
+            <option value="server1">Server 1</option>
+            <option value="server2">Server 2</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <div class="role-legend">
+            <legend>
+              Please specify <br />
+              your role:
+            </legend>
+          </div>
+          <div class="role-options">
+            <div>
+              <label
+                ><input type="radio" name="role" value="admin" /> Admin</label
+              >
+            </div>
+            <div>
+              <label
+                ><input type="radio" name="role" value="engineer" />
+                Engineer</label
+              >
+            </div>
+            <div>
+              <label
+                ><input type="radio" name="role" value="manager" />
+                Manager</label
+              >
+            </div>
+            <div>
+              <label
+                ><input type="radio" name="role" value="guest" /> Guest</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="role-legend">
+            <legend>
+              Please specify <br />
+              your services:
+            </legend>
+          </div>
+          <div class="role-options">
+            <div>
+              <label
+                ><input type="checkbox" name="service" value="mail" />
+                Mail</label
+              >
+            </div>
+            <div>
+              <label
+                ><input type="checkbox" name="service" value="payroll" />
+                Payroll</label
+              >
+            </div>
+            <div>
+              <label
+                ><input type="checkbox" name="service" value="self-service" />
+                Self-service</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button type="submit">Login</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
