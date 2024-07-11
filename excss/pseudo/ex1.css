@@ -1,0 +1,41 @@
+/*
+cú pháp phần tử giả 
+seclector: :tenphantu {
+code css
+}
+-before
+-after
+-first-line
+-first-letter
+-selection
+-placeholder
+*/
+
+
+
+
+h1::before {
+    content:"<" ;
+}
+
+h1::after {
+    content: ">";
+}
+
+p::first-line {
+    color: burlywood;
+}
+
+p::first-letter {
+    color: blue;
+}
+
+p::selection {
+    background: black;
+    color: blueviolet;
+}
+
+input::placeholder {
+    color: red;
+    font-style: italic;
+}

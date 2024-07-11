@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #2b3a42;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h1 span {
+    color: #ff9900;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+}
+
+.input-container, .button-container {
+    margin: 5px;
+}
+
+.button-container {
+    margin-left: 30px; 
+}
+
+input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    
+}
+
+input[type="email"]::placeholder {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #ff9900;
+    color: #fff;
+}
+
+.container:hover input[type="email"] {
+    background-color: #ddd;
+}
+
+.container:hover input[type="email"]::placeholder {
+    color: #ff9900;
+}
+
+.container:hover button {
+    background-color: #ff9900;
+    color: #fff;
+}

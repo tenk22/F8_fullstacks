@@ -1,0 +1,8 @@
+ul li a[title~="bao"] {
+    color: rgb(196, 59, 114);
+}
+
+[class^="title-"] {
+    color: brown;
+}
+
