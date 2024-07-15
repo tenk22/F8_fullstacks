@@ -1,0 +1,47 @@
+/*
+font-family: thay đổi font chữ của văn bản
+
+hoj font:
+sans-serif : họ font ko chân
+serif : họ font có chân
+
+thuộc tính word-spacing : thay đổi khoảng cách giữa cách từ
+
+thuộc tính text-decoration : thay đổi các đương gạch trong văn bản
+-none
+-underline
+-overline
+=line-through
+
+thuộc tính text-align: thay đổi vị trí văn bản theo chiều ngang
+-left
+-right
+-center
+-justify
+
+thuộc tính text-align-last : căn chỉnh vị trí văn bản cuôi cùng trong đoạn văn
+
+word-wrap
+
+background-color: thay đổi nên của thành phần html
+-background-color
+-background-image
+-background-repeat
+-background-position
+-background-size
+-background-attachment
+-background: gộp tất cả những thuộc tính trên
+
+*/
+body {
+    height: 200vh;
+    background-color: blueviolet;
+    background-image: url(https://fastly.picsum.photos/id/412/200/300.jpg?hmac=xn1StiBtQbop1HtnoV2rRyhbONcD88TTDGhmRBa2fso);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+p {
+    background-color: green;
+}
+
