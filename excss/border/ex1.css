@@ -1,0 +1,24 @@
+/*
+border: thiết lập viền cho phần tử
+-width
+-style
+-color
+
+cú pháp mở rộng
+-border-(side)-width
+-border-(side)-style
+-border-(side)-color
+
+
+thuộc tính rút gọn
+-border: width style color        border: 5px soild green
+-border-(side): width style color            border-top: 5px soild green
+
+*/
+
+
+.box {
+    border-width: 5px;
+    border-style: double;
+    border-color: brown;
+}

@@ -1,0 +1,25 @@
+/*
+nếu là hình vuông thì border radius: 50% trở lên sẽ chuyển thành hình vuông
+
+*/
+
+
+.box {
+    border: 5px solid rebeccapurple;
+    border-radius: 10px;
+}
+
+.btn {
+    background-color: yellowgreen;
+    color: #fff;
+    border: 0;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.btn-sm {
+    height: 25px;
+}
