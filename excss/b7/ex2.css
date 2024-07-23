@@ -1,0 +1,39 @@
+/*
+width: chieu rong
+height: chieu cao
+min-width: chieu rong toi thieu
+max-width: chieu rong toi da
+
+
+
+don vi: px,%,vh,vx
+
+
+Luu y: chi ap dung voi the block, inline-block
+
+thuoc tinh width chay tu min den max
+thuoc tinh height chay tu min den max
+
+
+*/
+
+/*
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+
+.wrapper {
+    height: 400px;
+    background-color: black;
+}
+
+.box {
+    width: 200px;
+    height: 100vh;
+    background-color: aqua;
+}
+*/
