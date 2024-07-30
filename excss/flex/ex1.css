@@ -1,0 +1,80 @@
+/*
+các thuộc tính trong nhóm flex container :
+-display: flex|inline-flex --> kích hoạt flex box
+-flex-direction: chọn hướng cho trục chính
++row: hướng nằm ngnag
++row-reverse: nằm ngang đảo ngược
++column: hướng nằm dọc
++column-reverse: hướng nằm dọc đảo ngược
+-justify-content: căn chỉnh phẩn từ các item theo hướng song song của trục chính
++flex-start
++flex-end
++space-between
++space-around
++space-evenly
++start
++end
+-align-item: căn chỉnh các item theo hướng song song với trục cross( vuông góc với trục chính )
++flex-start
++flex-end
++center
++baseline
++stretch : mặc định
+-flex-wrap : wrap các item
++nowrap
++wrap
++wrap-reverse
+-align-content: điều chỉnh các hàng và cột theo hướng vuông góc với các trục chính(chỉ áp dụng khi có nhiều hàng nhiều cột)
++flex-start
++flex-end
++space-between
++space-around
++space-evenly
++stretch
+-gap: căn chỉnh khoảng cách giữa các item
++row-gap: căn chỉnh khoảng cách theo hàng
++column-gap: căn chỉnh khoảng cách theo cột
+-các thuộc tính trong nhóm flex-item
++flex-grow : number --> lấp đầy khoảng cách còn trống của container
++flex-shrink: number--> tự động co lại khi vượt quá kích thước của container
++flex-basic: thiết lập kích thước ban đầu cho item ( sẽ bị chặn bawoir min,max width và min,max height)
+-flex: grow, shrink basic
+-order : sắp xếp các item theo thứ tự mong muốn
+-align-self : căn chỉnh chính nó theo hướng vuông góc với trục chính(giống align-item)
+
+*/
+
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.box {
+    width: 400px;
+    height: 300px;
+    margin: 30px auto;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.item { 
+    background: green;
+    color: #fff;
+    border: 1px solid #fff;
+ 
+    flex-basis: 100px;
+    max-width: 80px;
+    flex: 0 1 100px;
+}
+
+.item:nth-child(5) {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
