@@ -1,0 +1,177 @@
+/* Resetting padding, margin, and box-sizing for all elements */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Centering content and setting background color for the body */
+body {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #2f3b47;
+}
+
+/* Positioning the main-wrapper element */
+.main-wrapper {
+    position: relative;
+}
+
+/* Styling the post element */
+.post {
+    position: relative;
+    top: 40px;
+    cursor: pointer;
+    transition: transform .7s ease;
+}
+
+.post:hover {
+    transform: translateY(40px);
+}
+
+/* Styling the wrapper element */
+.wrapper {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    background-color: #ba4b37;
+}
+
+.wrapper::before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-bottom: 115px solid #ba4b37;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    top: -114px;
+    left: 0;
+    transform-origin: bottom center;
+    transform: rotateX(-170deg);
+    transition: transform .4s ease .7s;
+    z-index: 9;
+}
+
+.post:hover .wrapper::before {
+    transform: rotateX(0deg);
+    transition-delay: 0s;
+    z-index: 7;
+}
+
+/* Styling the inner-wrapper element */
+.inner-wrapper {
+    position: relative;
+    width: 320px;
+    height: 520px;
+    top: -320px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Styling the note element */
+.note {
+    position: absolute;
+    width: 270px;
+    height: 300px;
+    background: #fff;
+    left: 25px;
+    top: 420px;
+    transform-origin: top;
+    transition: transform .4s ease .4s;
+    z-index: 10;
+}
+
+.post:hover .note {
+    transform: translateY(-240px);
+    transition-delay: .4s;
+}
+
+/* Styling the header section of the note */
+.header {
+    height: 22px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Styling the slant shape */
+.slant {
+    background-color: #c76c6e;
+    width: 22px;
+    transform: skew(-35deg);
+}
+
+/* Styling the content section of the note */
+.content {
+    height: 100%;
+    padding: 12px;
+}
+
+.bar {
+    background-color: #c76c6e;
+    height: 20px;
+    margin-top: 8px;
+}
+
+.top-bar {
+    width: 110px;
+}
+
+.bottom-bar {
+    width: 55px;
+    margin-top: 18px;
+}
+
+/* Styling the dot in the note */
+.dot {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #eecfce;
+    transform: translate(180px, 65px);
+}
+
+/* Styling the edge part of the wrapper */
+.edge {
+    position: absolute;
+    border-left: 160px solid #e1514b;
+    border-bottom: 110px solid transparent;
+    border-top: 110px solid transparent;
+    top: 1px;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 99;
+}
+
+.edge::before {
+    position: absolute;
+    content: "";
+    border-right: 320px solid #e85f57;
+    border-top: 220px solid transparent;
+    right: -160px;
+    top: -111px;
+}
+
+/* Styling the effect-shadow element */
+.effect-shadow {
+    position: absolute;
+    width: 310px;
+    height: 12px;
+    border-radius: 40%;
+    background-color: rgba(0, 0, 0, 0.35);
+    bottom: -190px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 25px 15px rgba(0, 0, 0, 0.4);
+    transition: width .4s linear;
+}
+
+.post:hover~.effect-shadow {
+    width: 210px;
+}
