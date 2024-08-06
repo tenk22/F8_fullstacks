@@ -9,23 +9,23 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <title>Grocery Delivery</title>
+    <title>My Grocery Site</title>
   </head>
   <body>
     <header>
-      <div class="brand-logo">
-        <img src="img/logo.svg" alt="brand" />
+      <div class="brand">
+        <img src="img/logo.svg" alt="logo" />
       </div>
       <nav>
         <ul>
           <li><a href="#!">Home</a></li>
           <li><a href="#!">Products</a></li>
-          <li><a href="#!">Services</a></li>
-          <li><a href="#!">Shop</a></li>
+          <li><a href="#!">About</a></li>
+          <li><a href="#!">Contact</a></li>
         </ul>
       </nav>
-      <div class="search-bar">
-        <div class="search-box">
+      <div class="header-actions">
+        <div class="search-bar">
           <i class="ri-search-line"></i>
           <input type="text" name="search" id="search" placeholder=" " />
           <label for="search">Search</label>
@@ -37,104 +37,104 @@
       </div>
     </header>
     <main>
-      <section class="hero-section">
-        <div class="intro">
+      <section class="intro-section">
+        <div class="intro-text">
           <h3>
-            Speed and Freshness
+            Speedy Delivery
             <img src="img/strawberry.svg" alt="strawberry" />
           </h3>
-          <h1>Get your groceries delivered in <span>2 hours</span></h1>
-          <p>Fresh groceries delivered to your doorstep every morning.</p>
+          <h1>Get your groceries in <span>2 hours</span></h1>
+          <p>
+            We ensure fresh groceries delivered to your doorstep every morning.
+          </p>
           <div class="actions">
-            <a href="#!" class="btn">Order Now</a>
+            <a href="#!" class="button">Order Now</a>
             <button>
               <img src="img/button-play.svg" alt="play-img" />
-              <span>Order Process</span>
+              <span>How it Works</span>
             </button>
           </div>
         </div>
-        <div class="hero-image">
+        <div class="intro-image">
           <img src="img/header-img.png" alt="header-img" />
         </div>
       </section>
-      <div class="container">
+
+      <div class="features">
         <section class="services-section">
           <div class="section-header">
             <h5>Our Services</h5>
-            <h2>Fresh produce delivered to your door</h2>
+            <h2>Fresh produce delivered to you</h2>
           </div>
-          <div class="service-cards">
+          <div class="cards">
             <div class="service-card">
-              <div class="hover-bg"></div>
-              <div class="card-content">
-                <div class="icon">
-                  <img src="img/service-ic1.svg" alt="service" />
-                </div>
-                <h3>Free Shipping</h3>
-                <p>Receive your orders with the freshness of groceries.</p>
+              <div class="service-image">
+                <img src="img/service-ic1.svg" alt="free shipping" />
               </div>
+              <h3>Free Shipping</h3>
+              <p>
+                Enjoy fresh groceries delivered to your door without extra
+                costs.
+              </p>
             </div>
             <div class="service-card">
-              <div class="hover-bg"></div>
-              <div class="card-content">
-                <div class="icon">
-                  <img src="img/service-ic2.svg" alt="return service" />
-                </div>
-                <h3>15 Days Returns</h3>
-                <p>Return any items within 15 days if you're not satisfied.</p>
+              <div class="service-image">
+                <img src="img/service-ic2.svg" alt="returns" />
               </div>
+              <h3>Easy Returns</h3>
+              <p>Return any unsatisfactory items within 15 days.</p>
             </div>
             <div class="service-card">
-              <div class="hover-bg"></div>
-              <div class="card-content">
-                <div class="icon">
-                  <img src="img/service-ic3.svg" alt="delivery" />
-                </div>
-                <h3>Quality Guarantee</h3>
-                <p>If you receive spoiled items, return them immediately.</p>
+              <div class="service-image">
+                <img src="img/service-ic3.svg" alt="delivery" />
               </div>
+              <h3>Prompt Delivery</h3>
+              <p>We guarantee quick and efficient delivery of your orders.</p>
             </div>
           </div>
         </section>
       </div>
-      <section class="highlight-section">
-        <div class="highlight-image">
-          <img src="img/feat.png" alt="feature" />
+
+      <section class="highlights-section">
+        <div class="highlights-image">
+          <img src="img/feat.png" alt="highlight" />
         </div>
-        <div class="highlight-content">
-          <h5>WHY CHOOSE US</h5>
-          <h2>Discover new favorites</h2>
-          <p>Enjoy the best products selected carefully for you.</p>
-          <a href="#!" class="btn">Explore Now</a>
-        </div>
-      </section>
-      <section class="highlight-section reverse">
-        <div class="highlight-image">
-          <img src="img/feat2.png" style="width: 110%" alt="highlight" />
-        </div>
-        <div class="highlight-content">
-          <h5 style="color: #f9ba45">HOME DELIVERY</h5>
-          <h2>Relax at home, we will handle your order</h2>
-          <p>We ensure prompt delivery and quality service.</p>
-          <a href="#!" class="btn">Explore Now</a>
+        <div class="highlights-content">
+          <h5>Why Choose Us</h5>
+          <h2>Discover New Favorites</h2>
+          <p>Experience the best quality products delivered to your home.</p>
+          <a href="#!" class="button">Explore Now</a>
         </div>
       </section>
-      <div class="container">
+
+      <section class="highlights-section reverse">
+        <div class="highlights-image">
+          <img src="img/feat2.png" alt="highlight" />
+        </div>
+        <div class="highlights-content">
+          <h5 class="home-delivery">Home Delivery</h5>
+          <h2>We Take Care of Your Orders</h2>
+          <p>Relax at home while we deliver fresh groceries to your door.</p>
+          <a href="#!" class="button">Explore Now</a>
+        </div>
+      </section>
+
+      <div class="download-app">
         <section class="download-section">
           <div class="download-image">
-            <img src="img/mobile.svg" alt="download_image" />
+            <img src="img/mobile.svg" alt="mobile app" />
           </div>
           <div class="download-content">
-            <h5 style="color: #f54748">Get our app</h5>
-            <h2>Order groceries easily with our app.</h2>
-            <p>Download our app for a seamless shopping experience.</p>
+            <h5 class="download">Download Our App</h5>
+            <h2>Order Groceries with Ease</h2>
+            <p>Get our app and make ordering groceries even more convenient.</p>
             <div class="app-links">
               <a href="#!">
-                <img src="img/apple.svg" alt="app_store" />
+                <img src="img/apple.svg" alt="app store" />
                 <span>App Store</span>
               </a>
-              <a href="#!" style="margin-left: 14px">
-                <img src="img/playstore.svg" alt="play_store" />
+              <a href="#!">
+                <img src="img/playstore.svg" alt="play store" />
                 <span>Play Store</span>
               </a>
             </div>
@@ -142,47 +142,47 @@
         </section>
       </div>
     </main>
-    <!-- Start footer -->
+
     <footer>
-      <div class="footer-main">
-        <div class="footer-intro">
-          <img src="img/logo.svg" alt="brand" />
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="img/logo.svg" alt="logo" />
           <p>
-            Fast delivery service available globally, using various
-            transportation methods.
+            Delivering fresh groceries worldwide with a variety of
+            transportation options.
           </p>
         </div>
         <div class="footer-links">
-          <div class="footer-column">
+          <div class="company-links">
             <h4>Company</h4>
             <ul>
               <li><a href="#!">About Us</a></li>
               <li><a href="#!">Blog</a></li>
               <li><a href="#!">Products</a></li>
-              <li><a href="#!">Location Map</a></li>
+              <li><a href="#!">Locations</a></li>
             </ul>
           </div>
-          <div class="footer-column">
+          <div class="service-links">
             <h4>Services</h4>
             <ul>
               <li><a href="#!">Order Tracking</a></li>
-              <li><a href="#!">Wishlist</a></li>
+              <li><a href="#!">Wish List</a></li>
               <li><a href="#!">My Account</a></li>
               <li><a href="#!">Terms & Conditions</a></li>
             </ul>
           </div>
         </div>
-        <div class="footer-contact">
-          <h4>Stay in Touch</h4>
-          <p>Subscribe to our weekly newsletter for updates and offers.</p>
+        <div class="newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe to our newsletter for the latest updates.</p>
         </div>
       </div>
-      <hr class="footer-divider" />
+      <hr class="divider" />
       <div class="footer-bottom">
-        <p>&copy; 2021 BESNIK. All Rights Reserved.</p>
-        <div class="footer-terms">
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Privacy Policy</a>
+        <p>&copy; 2024 Grocery Inc. All Rights Reserved</p>
+        <div class="footer-policies">
+          <a href="#!">Terms & Conditions</a>
+          <a href="#!">Privacy Policy</a>
         </div>
       </div>
     </footer>
