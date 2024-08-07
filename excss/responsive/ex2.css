@@ -1,0 +1,102 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #0c0808;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.contact {
+    color: #130d0d;
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    background-color: aqua;
+    border-radius: 10px;
+}
+
+nav ul li a:hover, .contact:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: #1c0c0c;
+    margin-left: 20px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .hamburger + #nav-links {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .contact {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contact {
+        display: none;
+    }
+}
