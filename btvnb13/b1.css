@@ -14,13 +14,18 @@
         sans-serif;
 }
 
-*,
-*::after,
-*::before {
-    padding: 0;
+* {
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box
 }
+
+:after,:before {
+    display: block
+}
+
 
 a {
     text-decoration: none;
@@ -209,6 +214,23 @@ html {
 
 .form-input {
     position: relative;
+}
+
+.social-txt:before {
+    left: 0;
+}
+
+.social-txt:after, .social-txt:before {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: #7878a3;
+    position: absolute;
+    top: 7px;
+}  
+
+:after, :before {
+    display: block;
 }
 
 .form-label {
