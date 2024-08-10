@@ -1,13 +1,14 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 :root {
     --color-1: #fff;
     --color-2: #23d2e2;
-    --color-3: #5753e4;
-    --t-color-1: #3e3f5e;
-    --t-color-2: #adafca;
-    --b-color: #dedeea;
+    --color-3: #4944ca;
+    --t-color-1: #5f6087;
+    --t-color-2: #bbbddc;
+    --b-color: #efeff5;
     --ff-1: Titillium Web, sans-serif;
     --ff-2: Rajdhani,
         sans-serif;
@@ -18,8 +19,7 @@
 *::before {
     padding: 0;
     margin: 0;
-    box-sizing: inherit;
-    outline: none;
+    box-sizing: border-box;
 }
 
 a {
@@ -460,7 +460,7 @@ input[type="password"]:focus {
 }
 
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1500px) {
     .container {
         padding: 80px 0 100px;
         position: static;

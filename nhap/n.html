@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MySite</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="n.css" />
+  </head>
+
+  <body>
+    <div class="main-container">
+      <input type="radio" name="auth-toggle" id="sign-in" hidden checked />
+      <input type="radio" name="auth-toggle" id="sign-up" hidden />
+      <div class="info-wrapper">
+        <div class="logo-container">
+          <img src="img/site-logo.png" alt="Site Logo" />
+        </div>
+        <div class="text-container">
+          <h2 class="welcome-text">Welcome to</h2>
+          <h1 class="site-title">MySite</h1>
+          <p class="description">
+            The next level social platform! Connect, share, and enjoy with our
+            interactive features and rewards system!
+          </p>
+        </div>
+        <div class="toggle-wrapper">
+          <label for="sign-in" class="button-switch switch-sign-in"
+            >Sign In</label
+          >
+          <label for="sign-up" class="button-switch switch-sign-up"
+            >Sign Up</label
+          >
+        </div>
+      </div>
+      <div class="auth-form-wrapper">
+        <div class="form-section sign-in-form">
+          <img
+            src="https://example.com/path-to-image/rocket.png"
+            alt="rocket"
+            class="rocket-image"
+          />
+          <h2 class="form-heading">Account Sign In</h2>
+          <form class="auth-form">
+            <div class="input-row">
+              <div class="input-item">
+                <div class="input-box">
+                  <input
+                    type="text"
+                    name="username"
+                    id="userEmail"
+                    placeholder=" "
+                  />
+                  <label for="userEmail" class="input-label"
+                    >Username or Email</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-item">
+                <div class="input-box">
+                  <input
+                    type="password"
+                    name="password"
+                    id="userPassword"
+                    placeholder=" "
+                  />
+                  <label for="userPassword" class="input-label">Password</label>
+                </div>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-item">
+                <div class="checkbox-group">
+                  <input
+                    type="checkbox"
+                    name="remember"
+                    id="remember-me"
+                    hidden
+                  />
+                  <div class="checkbox-box">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                  <label for="remember-me">Remember Me</label>
+                </div>
+              </div>
+              <div class="input-item">
+                <span class="forgot-password"
+                  ><a href="#!">Forgot Password?</a></span
+                >
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-item">
+                <button class="button button-sign-in">Sign In!</button>
+              </div>
+            </div>
+          </form>
+          <div class="social-login">
+            <span class="social-text">Sign in with your Social Account</span>
+            <div class="social-links">
+              <a href="" class="social-button fb">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+              <a href="" class="social-button tw">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="" class="social-button ttv">
+                <i class="fa-brands fa-twitch"></i>
+              </a>
+              <a href="" class="social-button yt">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section sign-up-form">
+          <img
+            src="https://example.com/path-to-image/rocket.png"
+            alt="rocket"
+            class="rocket-image"
+          />
+          <h2 class="form-heading">Create Your Account!</h2>
+          <form class="auth-form">
+            <div class="input-row">
+              <div class="input-item">
+                <div class="input-box">
+                  <input type="email" name="email" id="email" placeholder=" " />
+                  <label for="email" class="input-label">Email</label>
+                </div>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-item">
+                <div class="input-box">
+                  <input
+                    type="text"
+                    name="username"
+                    id="newUsername"
+                    placeholder=" "
+                  />
+                  <label for="newUsername" class="input-label">Username</label>
+                </div>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-item">
+                <div class="input-box">
+                  <input
+                    type="password"
+                    name="password"
+                    id="newPassword"
+                    placeholder=" "
+                  />
+                  <label for="newPassword" class="input-label">Password</label>
+                </div>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-item">
+                <div class="input-box">
+                  <input
+                    type="password"
+                    name="repassword"
+                    id="repeatPassword"
+                    placeholder=" "
+                  />
+                  <label for="repeatPassword" class="input-label"
+                    >Repeat Password</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-item">
+                <div class="checkbox-group">
+                  <input
+                    type="checkbox"
+                    name="newsletter"
+                    id="newsletter"
+                    hidden
+                  />
+                  <div class="checkbox-box">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                  <label for="newsletter"
+                    >Receive news and updates via email</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-item">
+                <button class="button button-sign-up">Register Now!</button>
+              </div>
+            </div>
+          </form>
+          <p class="confirmation-text">
+            You'll receive a confirmation email with a link to activate your
+            account. Need help?
+            <a href="#!">Contact us</a>!
+          </p>
+        </div>
+      </div>
+
+      <div class="background-overlay"></div>
+    </div>
+  </body>
+</html>
