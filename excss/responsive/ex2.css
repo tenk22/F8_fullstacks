@@ -58,7 +58,7 @@ nav ul li a:hover, .contact:hover {
     display: none;
     cursor: pointer;
     font-size: 28px;
-    color: #1c0c0c;
+    color: #fff;
     margin-left: 20px;
 }
 
@@ -94,7 +94,6 @@ nav ul li a:hover, .contact:hover {
         order: 1;
     }
 }
-
 @media screen and (max-width: 767px) {
     .contact {
         display: none;
