@@ -3,212 +3,385 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MySite</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="n.css" />
+    <title>Vikinger | Home</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        width: 100%;
+        background-image: url(img/landing.jpg);
+        background-repeat: no-repeat;
+        overflow: hidden;
+        position: fixed;
+      }
+
+      .logo {
+        width: 50px;
+      }
+
+      .welcome-text h1:first-child {
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .welcome-text .vikinger {
+        font-family: Arial, Helvetica, sans-serif, sans-serif;
+        font-size: 6.5rem;
+        font-weight: 900;
+        position: relative;
+        top: -10px;
+      }
+
+      .welcome-text .info-text {
+        width: 384px;
+        margin: 30px auto 0;
+        font-size: 1.125rem;
+        line-height: 1.3333333333em;
+        font-weight: 500;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .left-section {
+        color: white;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .welcome-text {
+        text-align: center;
+        width: 80%;
+      }
+
+      .vikinger {
+        font-size: 48px;
+        margin: 0;
+      }
+
+      .buttons {
+        margin-top: 30px;
+      }
+
+      .login-btn,
+      .register-btn {
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      .login-btn {
+        background-color: #5468ff;
+        color: white;
+      }
+
+      .register-btn {
+        background-color: white;
+        color: #5468ff;
+      }
+
+      .right-section {
+        border-radius: 12px;
+        z-index: 1;
+        height: 77%;
+        top: 80px;
+        background-color: white;
+        width: 33%;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .form-container {
+        width: 100%;
+        max-width: 350px;
+        position: relative;
+      }
+
+      .form-box {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.5s ease-in-out;
+      }
+
+      .form-box .lined-text {
+        margin-top: 40px;
+      }
+
+      .lined-text {
+        font-size: 0.875rem;
+        font-weight: 700;
+        text-align: center;
+        position: relative;
+        margin: 20px 0;
+      }
+
+      .lined-text:before,
+      .lined-text:after {
+        content: "";
+        width: 60px;
+        height: 1px;
+        background-color: #eaeaf5;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .lined-text:before {
+        left: 0;
+        margin-right: 10px;
+      }
+
+      .lined-text:after {
+        right: 0;
+        margin-left: 10px;
+      }
+
+      .form-box.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .form-box:not(.active) {
+        transform: translateX(-100%);
+      }
+
+      .logo-rocket {
+        top: -68px;
+      }
+
+      .form-box h2 {
+        text-align: center;
+        color: #4b3e94;
+      }
+
+      .form-box input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .remember-forgot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .remember-forgot a {
+        color: #b2b7da;
+        text-decoration: none;
+      }
+
+      .remember-forgot input {
+        width: 10%;
+      }
+
+      .remember-forgot a:hover {
+        color: rgb(23, 164, 211);
+      }
+
+      .login-account-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #5468ff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-right: 8px;
+      }
+
+      .social-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .social-link:hover {
+        transform: translateY(-4px);
+      }
+
+      .social-link.facebook {
+        background-color: #3763d298;
+      }
+
+      .social-link.twitter {
+        background-color: #1abaff7e;
+      }
+
+      .social-link.twitch {
+        background-color: #7a5dfa76;
+      }
+
+      .social-link.youtube {
+        background-color: #ca475460;
+      }
+    </style>
   </head>
 
   <body>
-    <div class="main-container">
-      <input type="radio" name="auth-toggle" id="sign-in" hidden checked />
-      <input type="radio" name="auth-toggle" id="sign-up" hidden />
-      <div class="info-wrapper">
-        <div class="logo-container">
-          <img src="img/site-logo.png" alt="Site Logo" />
-        </div>
-        <div class="text-container">
-          <h2 class="welcome-text">Welcome to</h2>
-          <h1 class="site-title">MySite</h1>
-          <p class="description">
-            The next level social platform! Connect, share, and enjoy with our
-            interactive features and rewards system!
+    <div class="container">
+      <div class="left-section">
+        <div class="welcome-text">
+          <img src="img/vk logo.png" alt="Vikinger Logo" class="logo" />
+          <h1>Welcome to</h1>
+          <h1 class="vikinger">VIKINGER</h1>
+          <p class="info-text">
+            The next generation social network &amp; community! Connect with
+            your friends and play with our quests and badges gamification
+            system!
           </p>
-        </div>
-        <div class="toggle-wrapper">
-          <label for="sign-in" class="button-switch switch-sign-in"
-            >Sign In</label
-          >
-          <label for="sign-up" class="button-switch switch-sign-up"
-            >Sign Up</label
-          >
+          <div class="buttons">
+            <button class="login-btn" onclick="showLogin()">Login</button>
+            <button class="register-btn" onclick="showRegister()">
+              Register
+            </button>
+          </div>
         </div>
       </div>
-      <div class="auth-form-wrapper">
-        <div class="form-section sign-in-form">
-          <img
-            src="https://example.com/path-to-image/rocket.png"
-            alt="rocket"
-            class="rocket-image"
-          />
-          <h2 class="form-heading">Account Sign In</h2>
-          <form class="auth-form">
-            <div class="input-row">
-              <div class="input-item">
-                <div class="input-box">
-                  <input
-                    type="text"
-                    name="username"
-                    id="userEmail"
-                    placeholder=" "
-                  />
-                  <label for="userEmail" class="input-label"
-                    >Username or Email</label
-                  >
-                </div>
+      <div class="right-section">
+        <div class="form-container">
+          <div id="login-form" class="form-box active">
+            <img class="logo-rocket" src="/mnt/data/image.png" alt="rocket" />
+            <h2>Account Login</h2>
+            <form>
+              <input type="text" placeholder="Username or Email" required />
+              <input type="password" placeholder="Password" required />
+              <div class="remember-forgot">
+                <label><input type="checkbox" /> Remember Me</label>
+                <a href="#">Forgot Password?</a>
               </div>
-            </div>
-            <div class="input-row">
-              <div class="input-item">
-                <div class="input-box">
-                  <input
-                    type="password"
-                    name="password"
-                    id="userPassword"
-                    placeholder=" "
-                  />
-                  <label for="userPassword" class="input-label">Password</label>
-                </div>
-              </div>
-            </div>
-            <div class="input-row">
-              <div class="input-item">
-                <div class="checkbox-group">
-                  <input
-                    type="checkbox"
-                    name="remember"
-                    id="remember-me"
-                    hidden
-                  />
-                  <div class="checkbox-box">
-                    <i class="fa-solid fa-xmark"></i>
-                  </div>
-                  <label for="remember-me">Remember Me</label>
-                </div>
-              </div>
-              <div class="input-item">
-                <span class="forgot-password"
-                  ><a href="#!">Forgot Password?</a></span
-                >
-              </div>
-            </div>
-            <div class="input-row">
-              <div class="input-item">
-                <button class="button button-sign-in">Sign In!</button>
-              </div>
-            </div>
-          </form>
-          <div class="social-login">
-            <span class="social-text">Sign in with your Social Account</span>
+              <button type="submit" class="login-account-btn">
+                Login to your Account!
+              </button>
+            </form>
+            <p class="lined-text">Login with your Social Account</p>
             <div class="social-links">
-              <a href="" class="social-button fb">
-                <i class="fa-brands fa-square-facebook"></i>
+              <a class="social-link facebook" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-facebook"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                  ></path>
+                </svg>
               </a>
-              <a href="" class="social-button tw">
-                <i class="fa-brands fa-twitter"></i>
+              <a class="social-link twitter" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-twitter"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5 9.341-9.334 0-.14 0-.281-.008-.42A6.68 6.68 0 0 0 16 3.542a6.533 6.533 0 0 1-1.885.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.084.797A3.283 3.283 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.284 3.284 0 0 0 1.015 4.381A3.27 3.27 0 0 1 .64 6.575v.041a3.283 3.283 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115c-.211 0-.417-.021-.62-.059a3.283 3.283 0 0 0 3.065 2.278 6.588 6.588 0 0 1-4.862 1.36A9.29 9.29 0 0 0 5.026 15z"
+                  ></path>
+                </svg>
               </a>
-              <a href="" class="social-button ttv">
-                <i class="fa-brands fa-twitch"></i>
+              <a class="social-link twitch" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-twitch"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.857 0L1.5 2.357v10.286h4.714V16h2.357l2.357-2.357H14l2-2V0H3.857zm10.286 9.143l-1.714 1.714H9.714l-1.714 1.714v-1.714H4.571V1.714h9.572v7.429z"
+                  ></path>
+                  <path
+                    d="M11.643 4.571h-1.143v3.429h1.143V4.571zm-3.429 0h-1.143v3.429h1.143V4.571z"
+                  ></path>
+                </svg>
               </a>
-              <a href="" class="social-button yt">
-                <i class="fa-brands fa-youtube"></i>
+              <a class="social-link youtube" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-youtube"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8.051 1.999h-.002C3.073 1.982.226 4.42.015 8.454c-.24 4.598 2.73 6.36 7.503 6.546 4.778-.185 7.76-1.91 7.485-6.563-.264-4.129-2.92-6.437-6.95-6.438zm3.686 7.537l-4.718 2.325V5.837l4.718 2.337z"
+                  ></path>
+                </svg>
               </a>
             </div>
           </div>
-        </div>
-
-        <div class="form-section sign-up-form">
-          <img
-            src="https://example.com/path-to-image/rocket.png"
-            alt="rocket"
-            class="rocket-image"
-          />
-          <h2 class="form-heading">Create Your Account!</h2>
-          <form class="auth-form">
-            <div class="input-row">
-              <div class="input-item">
-                <div class="input-box">
-                  <input type="email" name="email" id="email" placeholder=" " />
-                  <label for="email" class="input-label">Email</label>
-                </div>
-              </div>
-            </div>
-            <div class="input-row">
-              <div class="input-item">
-                <div class="input-box">
-                  <input
-                    type="text"
-                    name="username"
-                    id="newUsername"
-                    placeholder=" "
-                  />
-                  <label for="newUsername" class="input-label">Username</label>
-                </div>
-              </div>
-            </div>
-            <div class="input-row">
-              <div class="input-item">
-                <div class="input-box">
-                  <input
-                    type="password"
-                    name="password"
-                    id="newPassword"
-                    placeholder=" "
-                  />
-                  <label for="newPassword" class="input-label">Password</label>
-                </div>
-              </div>
-            </div>
-            <div class="input-row">
-              <div class="input-item">
-                <div class="input-box">
-                  <input
-                    type="password"
-                    name="repassword"
-                    id="repeatPassword"
-                    placeholder=" "
-                  />
-                  <label for="repeatPassword" class="input-label"
-                    >Repeat Password</label
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="input-row">
-              <div class="input-item">
-                <div class="checkbox-group">
-                  <input
-                    type="checkbox"
-                    name="newsletter"
-                    id="newsletter"
-                    hidden
-                  />
-                  <div class="checkbox-box">
-                    <i class="fa-solid fa-xmark"></i>
-                  </div>
-                  <label for="newsletter"
-                    >Receive news and updates via email</label
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="input-row">
-              <div class="input-item">
-                <button class="button button-sign-up">Register Now!</button>
-              </div>
-            </div>
-          </form>
-          <p class="confirmation-text">
-            You'll receive a confirmation email with a link to activate your
-            account. Need help?
-            <a href="#!">Contact us</a>!
-          </p>
+          <div id="register-form" class="form-box">
+            <h2>Create an Account</h2>
+            <form>
+              <input type="text" placeholder="Username" required />
+              <input type="email" placeholder="Email" required />
+              <input type="password" placeholder="Password" required />
+              <button type="submit" class="login-account-btn">
+                Register Now!
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-
-      <div class="background-overlay"></div>
     </div>
+
+    <script>
+      function showLogin() {
+        document.getElementById("login-form").classList.add("active");
+        document.getElementById("register-form").classList.remove("active");
+      }
+
+      function showRegister() {
+        document.getElementById("register-form").classList.add("active");
+        document.getElementById("login-form").classList.remove("active");
+      }
+    </script>
   </body>
 </html>
