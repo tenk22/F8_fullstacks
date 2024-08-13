@@ -3,385 +3,467 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vikinger | Home</title>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Arial", sans-serif;
-        width: 100%;
-        background-image: url(img/landing.jpg);
-        background-repeat: no-repeat;
-        overflow: hidden;
-        position: fixed;
-      }
-
-      .logo {
-        width: 50px;
-      }
-
-      .welcome-text h1:first-child {
-        font-size: 24px;
-        margin: 0;
-      }
-
-      .welcome-text .vikinger {
-        font-family: Arial, Helvetica, sans-serif, sans-serif;
-        font-size: 6.5rem;
-        font-weight: 900;
-        position: relative;
-        top: -10px;
-      }
-
-      .welcome-text .info-text {
-        width: 384px;
-        margin: 30px auto 0;
-        font-size: 1.125rem;
-        line-height: 1.3333333333em;
-        font-weight: 500;
-      }
-
-      .container {
-        display: flex;
-        height: 100vh;
-        overflow: hidden;
-      }
-
-      .left-section {
-        color: white;
-        width: 60%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-      }
-
-      .welcome-text {
-        text-align: center;
-        width: 80%;
-      }
-
-      .vikinger {
-        font-size: 48px;
-        margin: 0;
-      }
-
-      .buttons {
-        margin-top: 30px;
-      }
-
-      .login-btn,
-      .register-btn {
-        padding: 10px 20px;
-        margin: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 18px;
-      }
-
-      .login-btn {
-        background-color: #5468ff;
-        color: white;
-      }
-
-      .register-btn {
-        background-color: white;
-        color: #5468ff;
-      }
-
-      .right-section {
-        border-radius: 12px;
-        z-index: 1;
-        height: 77%;
-        top: 80px;
-        background-color: white;
-        width: 33%;
-        display: flex;
-        justify-content: center;
-        padding-top: 50px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .form-container {
-        width: 100%;
-        max-width: 350px;
-        position: relative;
-      }
-
-      .form-box {
-        position: absolute;
-        width: 100%;
-        opacity: 0;
-        transform: translateX(100%);
-        transition: all 0.5s ease-in-out;
-      }
-
-      .form-box .lined-text {
-        margin-top: 40px;
-      }
-
-      .lined-text {
-        font-size: 0.875rem;
-        font-weight: 700;
-        text-align: center;
-        position: relative;
-        margin: 20px 0;
-      }
-
-      .lined-text:before,
-      .lined-text:after {
-        content: "";
-        width: 60px;
-        height: 1px;
-        background-color: #eaeaf5;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .lined-text:before {
-        left: 0;
-        margin-right: 10px;
-      }
-
-      .lined-text:after {
-        right: 0;
-        margin-left: 10px;
-      }
-
-      .form-box.active {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .form-box:not(.active) {
-        transform: translateX(-100%);
-      }
-
-      .logo-rocket {
-        top: -68px;
-      }
-
-      .form-box h2 {
-        text-align: center;
-        color: #4b3e94;
-      }
-
-      .form-box input {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-      }
-
-      .remember-forgot {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .remember-forgot a {
-        color: #b2b7da;
-        text-decoration: none;
-      }
-
-      .remember-forgot input {
-        width: 10%;
-      }
-
-      .remember-forgot a:hover {
-        color: rgb(23, 164, 211);
-      }
-
-      .login-account-btn {
-        width: 100%;
-        padding: 10px;
-        background-color: #5468ff;
-        border: none;
-        border-radius: 5px;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-        margin-top: 10px;
-      }
-
-      .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-right: 8px;
-      }
-
-      .social-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 10px;
-        transition: transform 0.2s ease-in-out;
-      }
-
-      .social-link:hover {
-        transform: translateY(-4px);
-      }
-
-      .social-link.facebook {
-        background-color: #3763d298;
-      }
-
-      .social-link.twitter {
-        background-color: #1abaff7e;
-      }
-
-      .social-link.twitch {
-        background-color: #7a5dfa76;
-      }
-
-      .social-link.youtube {
-        background-color: #ca475460;
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXUJbpoeUebE3axT9Qbih0FrfWH7tad/c2OGeUpOQCk8+ez6Df9uNKxR9EeQOPe+nPluL18Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>STravel</title>
+    <link rel="stylesheet" href="n.css" />
   </head>
-
   <body>
-    <div class="container">
-      <div class="left-section">
-        <div class="welcome-text">
-          <img src="img/vk logo.png" alt="Vikinger Logo" class="logo" />
-          <h1>Welcome to</h1>
-          <h1 class="vikinger">VIKINGER</h1>
-          <p class="info-text">
-            The next generation social network &amp; community! Connect with
-            your friends and play with our quests and badges gamification
-            system!
-          </p>
-          <div class="buttons">
-            <button class="login-btn" onclick="showLogin()">Login</button>
-            <button class="register-btn" onclick="showRegister()">
-              Register
-            </button>
+    <header>
+      <div class="logo">S<span class="highlight">TRAVEL</span></div>
+      <nav>
+        <ul>
+          <li><a href="#">Trang Chủ</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Điểm Đến</a></li>
+          <li><a href="#">Dịch Vụ</a></li>
+          <li><a href="#">Ảnh</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </nav>
+      <div class="buttons">
+        <button class="theme-switch">🌙</button>
+        <button class="book-now">Đặt Ngay</button>
+      </div>
+    </header>
+
+   
+      <section class="offer">
+        <p>Ưu Đãi 30.000.000 Cho 5 Người/3 Ngày</p>
+        <button class="book-now">Đặt Ngay</button>
+      </section>
+
+      <section class="hero">
+        <div class="image-container">
+          <img src="img/home-bg.jpg" alt="Mumbai" />
+          <div class="overlay">
+            <h1>Mumbai</h1>
+            <h2>Thành Phố Có Tất Cả</h2>
+            <p>
+              Mumbai Không Chỉ Là Trung Tâm Tài Chính – Kinh Tế, Kinh Đô Điện
+              Ảnh – Thời Trang <br />
+              Của Ấn Độ, Mà Đây Còn Là Thành Phố Cảng Vừa Hiện Đại Nhưng Vẫn
+              Mang Nhiều <br />
+              Nét Cổ Kính Với Những Công Trình Kiến Trúc, Quán Bar, Nhà Hàng,
+              Viện Bảo Tàng Và Các <br />
+              Cửa Hàng Thời Trang Hấp Dẫn...
+            </p>
           </div>
         </div>
+      </section>
+      <div class="experience-section">
+        <div class="video-container">
+          <video id="video-player" autoplay loop muted>
+            <source src="vid/vid-1.mp4" type="video/mp4">
+            <source src="vid/vid-2.mp4" type="video/mp4">
+            <source src="vid/vid-3.mp4" type="video/mp4">
+          </video>
+          <div class="video-controls">
+            <button class="video-btn" data-video="vid/vid-1.mp4"></button>
+            <button class="video-btn" data-video="vid/vid-2.mp4"></button>
+            <button class="video-btn" data-video="vid/vid-3.mp4"></button>
+          </div>
+        </div>
+        <div class="text-container">
+          <section class="why-choose-stravel">
+            <h2>Tại Sao Nên Chọn Stravel</h2>
+            <h1>Trải Nghiệm Bậc Nhất</h1>
+            <p>Chúng Tôi Hợp Tác Với Những Địa Điểm Nghỉ Dưỡng Có Trải Nghiệm Bậc Nhất Để Đem Lại Một Kỳ Nghỉ Tuyệt Vời Cho Bạn Cùng Người Thân</p>
+            <button class="learn-more" onclick="scrollToTop()">
+            Tìm Hiểu Thêm Về Stravel
+          </button>
+        </div>
       </div>
-      <div class="right-section">
-        <div class="form-container">
-          <div id="login-form" class="form-box active">
-            <img class="logo-rocket" src="/mnt/data/image.png" alt="rocket" />
-            <h2>Account Login</h2>
-            <form>
-              <input type="text" placeholder="Username or Email" required />
-              <input type="password" placeholder="Password" required />
-              <div class="remember-forgot">
-                <label><input type="checkbox" /> Remember Me</label>
-                <a href="#">Forgot Password?</a>
-              </div>
-              <button type="submit" class="login-account-btn">
-                Login to your Account!
-              </button>
-            </form>
-            <p class="lined-text">Login with your Social Account</p>
-            <div class="social-links">
-              <a class="social-link facebook" href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-facebook"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
-                  ></path>
-                </svg>
-              </a>
-              <a class="social-link twitter" href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-twitter"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M5.026 15c6.038 0 9.341-5 9.341-9.334 0-.14 0-.281-.008-.42A6.68 6.68 0 0 0 16 3.542a6.533 6.533 0 0 1-1.885.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.084.797A3.283 3.283 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.284 3.284 0 0 0 1.015 4.381A3.27 3.27 0 0 1 .64 6.575v.041a3.283 3.283 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115c-.211 0-.417-.021-.62-.059a3.283 3.283 0 0 0 3.065 2.278 6.588 6.588 0 0 1-4.862 1.36A9.29 9.29 0 0 0 5.026 15z"
-                  ></path>
-                </svg>
-              </a>
-              <a class="social-link twitch" href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-twitch"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M3.857 0L1.5 2.357v10.286h4.714V16h2.357l2.357-2.357H14l2-2V0H3.857zm10.286 9.143l-1.714 1.714H9.714l-1.714 1.714v-1.714H4.571V1.714h9.572v7.429z"
-                  ></path>
-                  <path
-                    d="M11.643 4.571h-1.143v3.429h1.143V4.571zm-3.429 0h-1.143v3.429h1.143V4.571z"
-                  ></path>
-                </svg>
-              </a>
-              <a class="social-link youtube" href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-youtube"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8.051 1.999h-.002C3.073 1.982.226 4.42.015 8.454c-.24 4.598 2.73 6.36 7.503 6.546 4.778-.185 7.76-1.91 7.485-6.563-.264-4.129-2.92-6.437-6.95-6.438zm3.686 7.537l-4.718 2.325V5.837l4.718 2.337z"
-                  ></path>
-                </svg>
-              </a>
+      <section class="popular-destinations">
+        <span>Những điểm đến ở Mumbai</span>
+        <h2>Những Điểm Du Lịch Bậc Nhất</h2>
+        <div class="grid-container">
+            <div class="destination-card">
+                <img src="img/des-1.jpg" alt="Ấn Độ Môn">
+                <h3>Ấn Độ Môn</h3>
+                <p>Được Xây Dựng Vào Năm 1931, Còn Có Tên Gọi Khác Là "Bia Kỷ Niệm Chiến Sĩ Ấn Độ"</p>
+                <a href="#" class="read-more">Đọc Thêm </a>
             </div>
+            <div class="destination-card">
+                <img src="img/des-2.jpg" alt="Tòa Nhà Hình Trứng">
+                <h3>Tòa Nhà Hình Trứng</h3>
+                <p>Nghệ Thuật Kiến Trúc Thị Giác Kết Hợp Với Cách Sản Xuất, Sử Dụng Và Tái Tạo Năng Lượng Thông Minh</p>
+                <a href="#" class="read-more">Đọc Thêm </a>
+            </div>
+            <div class="destination-card">
+              <img src="img/des-3.jpg" alt="Vườn quốc gia Sanjay Gandhi">
+              <h3>Vườn quốc gia Sanjay Gandhi</h3>
+              <p>bao gồm loài bướm đêm Atlas – bướm đêm lớn nhất thế giới, cây hoa Karvi 7 năm nở hoa một lần…</p>
+              <a href="#" class="read-more">Đọc Thêm </a>
           </div>
-          <div id="register-form" class="form-box">
-            <h2>Create an Account</h2>
-            <form>
-              <input type="text" placeholder="Username" required />
-              <input type="email" placeholder="Email" required />
-              <input type="password" placeholder="Password" required />
-              <button type="submit" class="login-account-btn">
-                Register Now!
-              </button>
-            </form>
-          </div>
+          <div class="destination-card">
+            <img src="img/des-4.jpg" alt="Trung tâm triễn lãm Jehanggir">
+            <h3>Trung tâm triễn lãm Jehanggir</h3>
+            <p>khu vực triển lãm hàng đầu ở Mumbai dành cho nền mỹ thuật Ấn Độ đương đại</p>
+            <a href="#" class="read-more">Đọc Thêm </a>
         </div>
+        <div class="destination-card">
+          <img src="img/des-5.jpg" alt="Hang động Elephanta">
+          <h3>Tòa Nhà Hình Trứng</h3>
+          <p>lưu giữ nhiều kiến trúc chạm khắc tinh xảo và chúng đã xuất hiện ở đây từ thế kỷ thứ 5 đến thứ 8</p>
+          <a href="#" class="read-more">Đọc Thêm </a>
       </div>
+      <div class="destination-card">
+        <img src="img/des-6.jpg" alt="Lonavala và Khandala">
+        <h3>Lonavala và Khandala</h3>
+        <p>khu nghỉ dưỡng rất nổi tiếng, nằm giữa đường cao tốc Mumbai – Pune.</p>
+        <a href="#" class="read-more">Đọc Thêm </a>
     </div>
+    <div class="destination-card">
+      <img src="img/des-7.jpg" alt="Thành phố Pune">
+      <h3>Thành phố Pune</h3>
+      <p>Giáo dục, nghệ thuật và âm nhạc là trọng tâm tại thành phố có nền văn hóa phong phú lâu đời này</p>
+      <a href="#" class="read-more">Đọc Thêm </a>
+  </div>
+  <div class="destination-card">
+    <img src="img/des-8.jpg" alt="Thành phố Nashik">
+    <h3>Thành phố Nashik</h3>
+    <p>là trung tâm hành hương lớn của người Hindu. Nashik có sự pha trộn của nét cổ xưa và hiện đại</p>
+    <a href="#" class="read-more">Đọc Thêm </a>
+</div>
+        </div>
+    </section>
+    <div class="service-section">
+      <h2>Nâng Cao Trải Nghiệm</h2>
+      <div class="grid-container">
+        <div class="service-card">
+            <i class="fas fa-globe"></i>
+            <h3>Rộng Khắp Thế Giới</h3>
+            <p>Some Text...</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-hiking"></i>
+            <h3>Những Cuộc Phiêu Lưu</h3>
+            <p>Some Text...</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-utensils"></i>
+            <h3>Dịch Vụ Ăn Uống</h3>
+            <p>Some Text...</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-hotel"></i>
+            <h3>Nghỉ Dưỡng Cao Cấp</h3>
+            <p>Some Text...</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-wallet"></i>
+            <h3>Giá Tốt Nhất</h3>
+            <p>Some Text...</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-headset"></i>
+            <h3>Hỗ Trợ 24/7</h3>
+            <p>Some Text...</p>
+        </div>
+    </div>
+  </div>
+  <section class="photo-gallery">
+    <h1>Những Bức Ảnh Về Mumbai</h1>
+    <div class="gallery">
+        <div class="photo-card">
+            <img src="img/gallery-img-1.jpg" alt="Thành Phố Mumbai">
+            <p class="location">Thành Phố Mumbai</p>
+            <h3>Vườn Quốc Gia Sanjay Gandhi</h3>
+        </div>
+        <div class="photo-card">
+            <img src="img/gallery-img-2.jpg" alt="Nhà Thờ St John The Evangelist">
+            <p class="location"></p>
+            <h3>Nhà Thờ St John The Evangelist</h3>
+        </div>
+        <div class="photo-card">
+          <img src="img/gallery-img-3.jpg" alt="Vườn treo Mumbai">
+          <p class="location">nằm trên đỉnh ngọn đồi Malabar ở Mumbai</p>
+          <h3>Vườn treo Mumbai</h3>
+      </div>
+      <div class="photo-card">
+        <img src="img/gallery-img-4.jpg" alt="Dr. Bhau Daji Lad">
+        <p class="location">Bảo tàng viện của thành phố Mumbai</p>
+        <h3>Dr. Bhau Daji Lad</h3>
+    </div>
+    <div class="photo-card">
+      <img src="img/gallery-img-5.jpg" alt="Tòa đô chánh Mumbai">
+      <p class="location">di sản thế giới được UNESCO nhìn nhận.</p>
+      <h3>Tòa đô chánh Mumbai</h3>
+  </div>
+  <div class="photo-card">
+    <img src="img/gallery-img-6.jpg" alt="kiến trúc thời Victoria">
+    <p class="location">Mumbai</p>
+    <h3>kiến trúc thời Victoria</h3>
+</div>
+<div class="photo-card">
+  <img src="img/gallery-img-7.jpg" alt="Khách sạn Taj Mahal">
+  <p class="location">Khách sạn 5 sao ở Mumbai</p>
+  <h3>Khách sạn Taj Mahal</h3>
+</div>
+<div class="photo-card">
+  <img src="img/gallery-img-8.jpg" alt="Hang động Elephanta">
+  <p class="location">phía đông thành phố Mumbai</p>
+  <h3>Hang động Elephanta</h3>
+</div>
+<div class="photo-card">
+  <img src="img/gallery-img-9.jpg" alt="phiên chợ địa phương">
+  <p class="location">Mumbai</p>
+  <h3>phiên chợ địa phương</h3>
+</div>
+    </div>
+</section>
+<section class="testimonials-section">
+  <div class="testimonials-content">
+      <div class="testimonials-text">
+          <h1>Những Lời Đánh Giá Tốt Nhất</h1>
+          <p>Tất Cả Những Lời Đánh Giá Chúng Tôi Đều Ghi Nhận Và Tiếp Thu Để Phát Triển. Đây Là Những Đánh Giá Tốt Nhất Về Chuyến Đi Mumbai Này.</p>
+      </div>
+      <div class="testimonials-reviews">
+          <div class="review-cards">
+              <div class="review-card">
+                  <p>Chuyến Đi Rất Vui, Giá Rất Rẻ. Gọi Tư Vấn Rất Nhanh. Tôi Sẽ Quay Lại Đây Một Lần Nữa</p>
+                  <h3>Duong Nguyen</h3>
+                  <p>Nội Trợ</p>
+              </div>
+              <div class="review-card">
+                  <p>Chuyến Đi Rất Vui, Đáng Để Thử. Đồ Ăn Ở Đây Rất Ngon. Chắc Chắn Sẽ Quay Lại Vì Đồ Ăn Hihi</p>
+                  <h3>Some People</h3>
+                  <p>Nằm Nhà</p>
+              </div>
+              <div class="review-card">
+                  <p>Hướng Dẫn Viên Rất Chu Đáo. Mọi Dịch Vụ Đều Có Và Rất Thoải Mái</p>
+                  <h3>Some People</h3>
+                  <p>...</p>
+              </div>
+          </div>
+          <div class="single-review-card">
+              <div class="review-card">
+                  <p>Khách Sạn Ở Rất Tuyệt. Thích Hợp Với 1 Chỗ Nghỉ Dưỡng.</p>
+                  <h3>Some People</h3>
+                  <p>Nằm Nhà</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="vr-title">
+  <span>Đánh Giá</span>
+<div class="map-form-section">
+  <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.275693340072!2d105.7850519!3d21.0207519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab582d02c04d%3A0x6ff91e7b7b58b1a9!2s197%20Tr%E1%BA%A7n%20Ph%C3%BA%2C%20P.%20V%C4%83n%20Qu%C3%A1n%2C%20H%C3%A0%20%C4%90%C3%B4ng%2C%20H%C3%A0%20N%E1%BB%99i%2C%20Vietnam!5e0!3m2!1sen!2sus!4v1622513753171!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <div class="review-section">
+    <form class="review-form">
+        <input type="text" placeholder="Tên của bạn">
+        <input type="email" placeholder="Email liên hệ">
+        <input type="text" placeholder="Số điện thoại">
+        <input type="text" placeholder="Chủ đề">
+        <textarea placeholder="Viết đánh giá của bạn về chuyến đi..."></textarea>
+        <button type="submit">Gửi Tới Stravel</button>
+    </form>
+</div>
+</div>
+</section>
+<section class="blog-posts-section">
+  <h2>Blogs & Posts</h2>
+  <h3 class="section-title">Tìm Hiểu Thêm Về Mumbai</h3>
+  <div class="posts-container">
+      <div class="post-card">
+          <img src="img/blog-1.jpg" alt="Mang Những Gì Khi Đi Mumbai" class="post-image">
+          <div class="post-content">
+              <h3 class="post-title">Mang Những Gì Khi Đi Mumbai</h3>
+              <p class="post-description">Giấy Tờ Tùy Thân, Giấy Xác Minh Tài Chính, Visa, Vé Máy Bay, Trang Phục, Đồ Dùng Cá Nhân, Balo, Túi Đựng Đồ...</p>
+              <div class="post-meta">
+                  <span class="post-date">22.11.2021</span>
+                  <span class="post-author">By Admin</span>
+              </div>
+          </div>
+      </div>
 
-    <script>
-      function showLogin() {
-        document.getElementById("login-form").classList.add("active");
-        document.getElementById("register-form").classList.remove("active");
-      }
+      <div class="post-card">
+          <img src="img/blog-2.jpg" alt="Xin Visa Đi Mumbai" class="post-image">
+          <div class="post-content">
+              <h3 class="post-title">Xin Visa Đi Mumbai</h3>
+              <p class="post-description">Visa Ai Cập Không Khó Xin, Thủ Tục Đơn Giản Gồm Đơn Tải Từ Trang Web Chính Thức Của Đại Sứ Quán</p>
+              <div class="post-meta">
+                  <span class="post-date">22.11.2021</span>
+                  <span class="post-author">By Admin</span>
+              </div>
+          </div>
+      </div>
 
-      function showRegister() {
-        document.getElementById("register-form").classList.add("active");
-        document.getElementById("login-form").classList.remove("active");
-      }
-    </script>
+      <div class="post-card">
+          <img src="img/blog-3.jpg" alt="Phương Tiện Đi Chuyển" class="post-image">
+          <div class="post-content">
+              <h3 class="post-title">Phương Tiện Đi Chuyển</h3>
+              <p class="post-description">Bạn Có Thể Đi Xe Bus, Tàu Lửa, Tàu Thủy Hoặc Bất Cứ Phương Tiện Nào Có Thể Di Chuyển Đều Được.</p>
+              <div class="post-meta">
+                  <span class="post-date">21st May, 2021</span>
+                  <span class="post-author">By Admin</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="start-journey">
+  <div class="background-image">
+  <div class="overlayy">
+  <div class="start-journey-content">
+      <h2>Cùng STravel</h2>
+      <h1>Bắt đầu chuyến đi của bạn</h1>
+      <p>Mỗi chuyến đi đều là một kỷ niệm đẹp. Hãy cùng STravel ghi lại kỷ niệm này!</p>
+      <button class="book-now">Đặt Ngay</button>
+  </div>
+</section>
+
+<section class="footer-section">
+  <div class="footer-container">
+      <div class="footer-content">
+          <div class="footer-brand">
+              <h2 class="footer-title">STravel</h2>
+              <p>Trải Qua 17 Năm Phát Triển Bền Vững, STravel Đã Ghi Dấu Ấn Của Mình Với Thông Điệp<br>"Nâng Tầm Trải Nghiệm Từng Chuyến Đi"</p>
+              <div class="footer-social">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+          <div class="footer-links">
+              <h3 class="footer-heading">Chuyển Hướng Nhanh</h3>
+              <ul>
+                  <li><a href="#">Trang Chủ</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Điểm Đến</a></li>
+                  <li><a href="#">Dịch Vụ</a></li>
+                  <li><a href="#">Ảnh</a></li>
+                  <li><a href="#">Blogs</a></li>
+              </ul>
+          </div>
+          <div class="footer-contact">
+              <h3 class="footer-heading">Liên Hệ</h3>
+              <ul>
+                  <li><i class="fas fa-map-marker-alt"></i> Hà Nội, Việt Nam</li>
+                  <li><i class="fas fa-phone"></i> +84-986-921-104</li>
+                  <li><i class="fas fa-envelope"></i> Duongcoilc2004@Gmail.Com</li>
+                  <li><i class="fas fa-clock"></i> 7:00am - 10:00pm</li>
+              </ul>
+          </div>
+          <div class="footer-newsletter">
+              <h3 class="footer-heading">Tin Tức Mới</h3>
+              <p>Đăng Ký Để Nhận Tin Tức Về Ưu Đãi Sớm Nhất!</p>
+              <form>
+                  <input type="email" placeholder="Email của bạn">
+                  <button type="submit">Đăng Ký</button>
+              </form>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>Created By <span class="footer-brand-name">STravel</span> | All Rights Reserved!</p>
+      </div>
+  </div>
+</section>
   </body>
 </html>
+<script>
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+</script>
+<script>
+  const videoPlayer = document.getElementById('video-player');
+  const videoButtons = document.querySelectorAll('.video-btn');
+
+  videoButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const videoSrc = button.getAttribute('data-video');
+      videoPlayer.src = videoSrc;
+      videoPlayer.play();
+    });
+  });
+</script>
+<script>
+const gridItems = document.querySelectorAll('.grid-item');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+gridItems.forEach(item => {
+    observer.observe(item);
+});
+</script>
+
+<script>
+  document.addEventListener("scroll", function() {
+    const cards = document.querySelectorAll('.service-card');
+    const triggerBottom = window.innerHeight / 5 * 4;
+
+    cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+
+        if (cardTop < triggerBottom) {
+            card.classList.add('appear');
+        } else {
+            card.classList.remove('appear');
+        }
+    });
+});
+
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const photoCards = document.querySelectorAll('.photo-card');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+
+    photoCards.forEach(card => {
+        observer.observe(card);
+    });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".review-card");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    });
+
+    cards.forEach(card => {
+        observer.observe(card);
+    });
+});
+
+window.addEventListener('scroll', function() {
+    var reviewForm = document.querySelector('.review-form');
+    var scrollPosition = window.scrollY;
+
+    if (scrollPosition > 100) {
+        reviewForm.style.opacity = '1';
+        reviewForm.style.transform = 'translateY(0)';
+    } else {
+        reviewForm.style.opacity = '0';
+        reviewForm.style.transform = 'translateY(20px)';
+    }
+});
+</script>
