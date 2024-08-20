@@ -1,0 +1,106 @@
+// vòng lặp : cú pháp cho phép 1 đoạn chương trình lặp đi lặp lại theo 1 số lần nhất định
+// $length: 5;
+// vòng lặp @for
+// @for $i from 1 through $length {
+//   .column-#{$i} {
+//     width: $i * 50%;
+//   }
+// }
+
+//BTap: selector cuối cùng để width = 0
+
+// $length: 5;
+
+// @for $i from 1 through $length {
+//   .column-#{$i} {
+//     width: $i * 50%;
+//   }
+// }
+
+// .column-#{$length} {
+//   width: 0;
+// }
+
+// vòng lặp @each
+// $sizes: 20px, 40px, 60px, 80px; //list
+// $length: length($sizes); // trả về số lượng phần tử của biến $sizes
+// @each $size in $sizes {
+//   .column-#{$size} {
+//     font-size: $size;
+//   }
+// }
+// // btap: phần tử cuối để font-size = 0
+
+// $sizes: 20px, 40px, 60px, 80px; //list
+// $length: length($sizes); // trả về số lượng phần tử của biến $sizes
+// $count: 0;
+// @each $size in $sizes {
+//   $count: $count + 1;
+//   .column-#{$size} {
+//     @if $count == $length {
+//       font-size: 0;
+//     } @else {
+//       font-size: $size;
+//     }
+//   }
+// }
+
+// $sizes: (small 40px normal), (medium 60px 600), (large 80px 800);
+// @each $name, $size, $weight in $sizes {
+//   .box-#{$name} {
+//     font-size: $size;
+//     font-weight: $weight;
+//   }
+// }
+
+// $breakpoints: sm 5576px, md 768px, lg 992px, xl 1200px, xxl 1400px;
+// $displayList: none block inline-block flex inline-flex table list-item;
+// @mixin display($name: "") {
+//   @each $display in $displayList {
+//     $prefix: "";
+//     @if $name != "" {
+//       $prefix: $name + "-";
+//     }
+//     $selector: ".d-" + $name + $display;
+//     #{$selector} {
+//       display: $display;
+//     }
+//   }
+// }
+// @include display();
+// @each $name, $value in $breakpoints {
+//   @media screen and (min-width: #{$value}) {
+//     @include display($name);
+//   }
+// }
+// .d-none {
+//   display: none;
+// }
+// @each $name, $value in $breakpoints {
+//   @media screen and (min-width: #{$value}) {
+//     .d-#{$name}-none {
+//       display: none;
+//     }
+//   }
+// }
+
+// kiểu dữ liệu map
+// $size: (
+//   //key : value
+//   small: 40px,
+//   medium: 60px,
+//   large: 80px
+// );
+// @each $name, $value in $size {
+//   .box-#{$name} {
+//     font-size: $value;
+//   }
+// }
+// import với namespace
+//cú pháp gọi: namespace.tenbien hoặc namespace.tenmixin
+// lưu ý: mặc định tên namespace là tên file
+// @use "mixin";
+// @use "variable";
+// .box {
+//   background:mixin.$primeryColor ;
+// }
