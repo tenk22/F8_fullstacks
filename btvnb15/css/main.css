@@ -82,18 +82,12 @@ body {
   cursor: pointer;
 }
 
-.logo {
-  padding: 5.4rem 0 0 5.8rem;
-  grid-area: sidebar;
-  margin-right: 38px;
-  display: flex;
-  flex-direction: column;
-}
 .logo img {
-  height: 40px;
-  margin-right: 10px;
+  max-width: 150px;
+  margin-bottom: 3rem;
 }
-.logo .brand {
+
+.brand {
   font-size: 24px;
   font-weight: bold;
 }

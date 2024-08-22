@@ -86,22 +86,14 @@ body {
   cursor: pointer;
 }
 
-.logo {
-  padding: 5.4rem 0 0 5.8rem;
-  grid-area: sidebar;
-  margin-right: 38px;
-  display: flex;
-  flex-direction: column;
+.logo img {
+  max-width: 150px;
+  margin-bottom: 3rem;
+}
 
-  img {
-    height: 40px;
-    margin-right: $spacing-unit;
-  }
-
-  .brand {
-    font-size: 24px;
-    font-weight: bold;
-  }
+.brand {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .main-content {

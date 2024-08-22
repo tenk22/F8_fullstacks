@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 3.58px;
+  left: -0.34px;
+  width: 1600.34px;
+  height: 108.33px;
+  background-color: white;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+  position: absolute;
+  top: 22.17px;
+  left: 199.71px;
+  width: 105.02px;
+  height: 73px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 55.17px;
+  left: 661.8px;
+  width: 740.32px;
+  height: 56.67px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  line-height: 56.67px;
+}
+
+.nav-menu a.active {
+  color: #2dad2f;
+  font-weight: bold;
+}
+
+.nav-menu a:hover {
+  color: #2dad2f;
+}
+
+.cart-search {
+  position: absolute;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart {
+  position: relative;
+}
+
+.shopping-cart-icon::before {
+  content: "\f07a"; /* Unicode for shopping cart icon */
+  font-family: "FontAwesome";
+  font-size: 24px;
+  color: #333;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #e67e22;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.search-icon::before {
+  content: "\f002"; /* Unicode for search icon */
+  font-family: "FontAwesome";
+  font-size: 24px;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 200px;
+  background-color: #e8f7d3; /* Light green background */
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.hero-image img {
+  width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-image::after {
+  content: "GREEN CHOP";
+  position: absolute;
+  right: -200px;
+  font-size: 120px;
+  color: rgba(100, 175, 100, 0.15);
+  font-weight: bold;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=main.css.map */
