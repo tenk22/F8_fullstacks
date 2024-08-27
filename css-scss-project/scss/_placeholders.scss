@@ -1,0 +1,22 @@
+%flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+%text-center {
+  text-align: center;
+}
+
+%button-style {
+  border: none;
+  background-color: $primary-color;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
