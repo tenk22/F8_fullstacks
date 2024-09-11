@@ -1,18 +1,25 @@
 const textElement = document.getElementById("text");
-const words = textElement.innerText.split(" ");
-textElement.innerHTML = words
-  .map((word) => `<span class="word">${word}</span>`)
-  .join(" ");
-
-const wordElements = document.querySelectorAll(".word");
-let currentWord = 0;
+const text = textElement.innerText;
+let currentIndex = 0;
 
 function highlightWord() {
-  wordElements.forEach((word, index) => {
-    word.classList.toggle("highlight", index === currentWord);
-  });
+  let wordStart = currentIndex;
+  let wordEnd = text.indexOf(" ", wordStart);
 
-  currentWord = (currentWord + 1) % wordElements.length;
+  if (wordEnd === -1) {
+    wordEnd = text.length;
+  }
+
+  const highlightedText =
+    text.substring(0, wordStart) +
+    `<span class="highlight">${text.substring(wordStart, wordEnd)}</span>` +
+    text.substring(wordEnd);
+  textElement.innerHTML = highlightedText;
+
+  currentIndex = wordEnd + 1;
+  if (currentIndex >= text.length) {
+    currentIndex = 0;
+  }
 }
 
 setInterval(highlightWord, 500);

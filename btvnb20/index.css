@@ -1,7 +1,4 @@
-.word {
-    display: inline-block;
-    transition: color 0.3s;
-  }
+
   .highlight {
     color: red;
   }
