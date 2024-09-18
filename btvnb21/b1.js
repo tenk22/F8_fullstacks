@@ -5,7 +5,6 @@ const customers = [
 ];
 function createCustomers(customers) {
   let n = customers.length;
-
   for (let i = 0; i < n - 1; i++) {
     for (let j = 0; j < n - 1 - i; j++) {
       if (customers[j].age > customers[j + 1].age) {
@@ -15,12 +14,20 @@ function createCustomers(customers) {
       }
     }
   }
-  return customers.map((customer) => {
-    return {
-      ...customer,
-      shortName: customer.name.split(" ").slice(0, -1).join(" "),
+  const result = [];
+  for (let i = 0; i < customers.length; i++) {
+    const customer = customers[i];
+    const nameParts = customer.name.split(" ");
+    const shortName = nameParts.slice(0, nameParts.length - 1).join(" ");
+    const newCustomer = {
+      name: customer.name,
+      age: customer.age,
+      address: customer.address,
+      shortName: shortName,
     };
-  });
+    result.push(newCustomer);
+  }
+  return result;
 }
 const result = createCustomers(customers);
 console.log(result);
