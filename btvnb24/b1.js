@@ -17,27 +17,27 @@ const students = [
   { id: 16, name: "Nguyễn Nhung", age: 18 },
 ];
 
+function splitName(fullName) {
+  const nameParts = fullName.split(" ");
+  const lastName = nameParts[0];
+  const firstName = nameParts[nameParts.length - 1];
+  const middleName = nameParts.slice(1, -1).join(" ");
+  return { lastName, middleName, firstName };
+}
+
 students.sort((a, b) => {
-  const nameA = a.name
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .split(" ");
-  const nameB = b.name
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .split(" ");
+  const nameA = splitName(a.name);
+  const nameB = splitName(b.name);
 
-  const lastNameA = nameA.pop();
-  const lastNameB = nameB.pop();
-
-  if (lastNameA !== lastNameB) {
-    return lastNameA.localeCompare(lastNameB);
+  if (nameA.firstName !== nameB.firstName) {
+    return nameA.firstName.localeCompare(nameB.firstName);
   }
 
-  const middleAndFirstNameA = nameA.join(" ");
-  const middleAndFirstNameB = nameB.join(" ");
+  if (nameA.middleName !== nameB.middleName) {
+    return nameA.middleName.localeCompare(nameB.middleName);
+  }
 
-  return middleAndFirstNameA.localeCompare(middleAndFirstNameB);
+  return nameA.lastName.localeCompare(nameB.lastName);
 });
 
 console.log(students);
