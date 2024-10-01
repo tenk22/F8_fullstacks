@@ -135,11 +135,15 @@
  * reduce()
  *
  */
-const arr = [1, 3, 2, 5, 8];
-total = 0;
-for (let i = 0; i < arr.length; i++) {
-  total += arr[i];
-}
-const result = arr.reduce((accumulator, item, index, arr) => {
-  console.log({ accumulator, item, index, arr });
-});
+// const arr = [1, 3, 2, 5, 8];
+// total = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   total += arr[i];
+// }
+// const result = arr.reduce((accumulator, item, index, arr) => {
+//   console.log({ accumulator, item, index, arr });
+// });
+
+/**
+ *
+ */
