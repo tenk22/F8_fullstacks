@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="b1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- <button id="darkModeToggle">Darkmode Lè</button> -->
+    <!-- <button id="darkModeToggle" class="dark-mode-toggle">
+      <i id="darkModeIcon" class="fas fa-sun"></i>
+    </button> -->
+    <div id="darkModeContainer">
+      <span id="darkModeText">Darkmode lè 💁‍♂️</span>
+      <button id="darkModeToggle" class="dark-mode-toggle">
+        <i id="darkModeIcon" class="fas fa-sun"></i>
+      </button>
+    </div>
+    <button id="addTaskButton">Add Task</button>
+    <button id="sortPriority">Priority sort</button>
+    <button id="filterCompleted">Completed</button>
+    <button id="filterDoing">Doing</button>
+    <button id="reset">Reset</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Priority</th>
+          <th>Completed</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="todos"></tbody>
+    </table>
+  </body>
+  <script src="b1.js"></script>
+</html>

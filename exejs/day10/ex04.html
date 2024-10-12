@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- cách 1 viết luôn sự kiện vào atribute -->
+    <!-- <button onmouseup="console.log('Mouse up')">Mouse up</button>
+    <button onmousedown="console.log('Mouse down')">Mouse down</button> -->
+    <button id="btn">click me</button>
+    <script>
+      const btnElement = document.getElementById("btn");
+      btnElement.onclick = function () {
+        console.log("helo");
+      };
+      btnElement.onclick = function () {
+        console.log("helo 2");
+      };
+      //  cách 2: sử dụng javascript để gắn sự kiện
+      // cách 3: sử dụng addEventListener
+    </script>
+  </body>
+</html>
