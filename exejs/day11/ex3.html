@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- xây dựng 1 form đăng kí gồm email password gender button submit sau khi người dùng nhập và ấn submit, khi ấn submit thì console .log thông tin đăng kí -->
+    <form id="registrationForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+      <label for="password">Password:</label>
+      <input type="password" id="password" required />
+      <label for="gender">Gender:</label>
+      <select id="gender" required>
+        <option value="">Select gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+  <script src="ex3.js"></script>
+</html>
