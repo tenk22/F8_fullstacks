@@ -53,19 +53,34 @@ const formElement = document.getElementById("register");
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const fullName = document.getElementById("fullname").value;
-  const email = document.getElementById("email").value;
+  const fullName = document.getElementById("fullname").value.trim();
+  const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("confirm_password").value;
   const gender = document.getElementById("gender").value;
-
+  if (!fullName || !email || !password || !confirmPassword || !gender) {
+    alert("All fields are required.");
+    return;
+  }
+  if (!validateEmail(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+  if (password !== confirmPassword) {
+    alert("Passwords do not match.");
+    return;
+  }
   const registerInfo = {
     fullName: fullName,
     email: email,
     password: password,
-    confirmPassword: confirmPassword,
     gender: gender,
   };
-
   console.log(registerInfo);
+  alert("Registration successful!");
+  formElement.reset();
 });
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(String(email).toLowerCase());
+}
