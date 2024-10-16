@@ -67,7 +67,7 @@ formElement.addEventListener("submit", (event) => {
     return;
   }
   if (password !== confirmPassword) {
-    alert("Passwords do not match.");
+    alert("Passwords ko match nhập lại.");
     return;
   }
   const registerInfo = {
@@ -77,7 +77,7 @@ formElement.addEventListener("submit", (event) => {
     gender: gender,
   };
   console.log(registerInfo);
-  alert("Registration successful!");
+  alert("Registration thành công");
   formElement.reset();
 });
 function validateEmail(email) {
