@@ -1,0 +1,78 @@
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin: 5px;
+      }
+      button.add {
+        background-color: #007bff;
+        color: white;
+      }
+      button.reset {
+        background-color: #6c757d;
+        color: white;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      .action-buttons button {
+        padding: 5px 10px;
+      }
+      .remove {
+        background-color: #dc3545;
+        color: white;
+      }
+      .update {
+        background-color: #ffc107;
+        color: white;
+      }
+      .no-data {
+        text-align: center;
+        color: #888;
+      }
+      .completed {
+        background-color: green;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .pending {
+        background-color: red;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    
