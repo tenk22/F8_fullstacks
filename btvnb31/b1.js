@@ -13,7 +13,6 @@ let todoEditing = {
   id: null,
 };
 
-// Fetch data
 fetch(url)
   .then((response) => response.json())
   .then((data) => {
@@ -22,7 +21,6 @@ fetch(url)
   })
   .catch((err) => console.log(err));
 
-// Render todos
 function renderTodos(todosToRender) {
   tbody.innerText = "";
   todosToRender.forEach((item) => {
@@ -47,10 +45,9 @@ function renderTodos(todosToRender) {
   });
 }
 
-// Toggle status
 function toggleStatus(id) {
   const todo = todos.find((item) => item.id === id);
-  todo.status = !todo.status; // Toggle status
+  todo.status = !todo.status;
 
   fetch(`${url}/${id}`, {
     method: "PATCH",
@@ -63,7 +60,6 @@ function toggleStatus(id) {
     .catch((err) => console.log(err));
 }
 
-// Remove todo
 function removeTodo(id) {
   confirm("Are you sure?") &&
     fetch(`${url}/${id}`, {
@@ -76,7 +72,6 @@ function removeTodo(id) {
       .catch((err) => console.log(err));
 }
 
-// Update todo
 function updateTodo(id) {
   todoEditing = todos.find((item) => item.id === id);
   titleElement.value = todoEditing.title;
@@ -84,7 +79,6 @@ function updateTodo(id) {
   addBtn.innerText = "Update";
 }
 
-// Handle add/update todo
 function handleTodo(event) {
   event.preventDefault();
   const todo = {
@@ -94,7 +88,6 @@ function handleTodo(event) {
   };
 
   if (todoEditing.id) {
-    // Update logic
     fetch(`${url}/${todoEditing.id}`, {
       method: "PATCH",
       headers: {
@@ -108,7 +101,6 @@ function handleTodo(event) {
       })
       .catch((err) => console.log(err));
   } else {
-    // Add logic
     fetch(url, {
       method: "POST",
       headers: {
@@ -123,12 +115,11 @@ function handleTodo(event) {
       })
       .catch((err) => console.log(err));
   }
-  resetForm(); // Reset form after submission
+  resetForm();
 }
 
 todoForm.addEventListener("submit", handleTodo);
 
-// Search function
 function searchTodo() {
   const searchTerm = searchElement.value.toLowerCase();
   const filteredTodos = todos.filter((todo) =>
@@ -137,7 +128,6 @@ function searchTodo() {
   renderTodos(filteredTodos);
 }
 
-// Filter function
 function filterTodos() {
   const filterValue = filterElement.value;
   if (filterValue === "all") {
@@ -149,7 +139,6 @@ function filterTodos() {
   }
 }
 
-// Reset form
 function resetForm() {
   titleElement.value = "";
   descriptionElement.value = "";
