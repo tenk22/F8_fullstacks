@@ -32,6 +32,16 @@
             id="description"
           />
         </div>
+
+        <div class="mb-3">
+          <label for="priority" class="form-label">Priority</label>
+          <select class="form-control" id="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+
         <div class="mb-3">
           <button class="btn btn-primary" id="add-btn">Add</button>
           <button type="button" class="btn btn-secondary" id="reset-btn">
@@ -40,18 +50,34 @@
         </div>
       </form>
 
-      <div class="mb-3">
+      <div class="mb-3 d-flex gap-2">
         <input
           type="text"
-          class="form-control"
+          class="form-control me-2"
           id="search"
           placeholder="Search by title..."
-          oninput="searchTodo()"
+          oninput="combinedFilter()"
         />
-        <select class="form-control" id="filter" onchange="filterTodos()">
+
+        <select
+          class="form-control me-2"
+          id="filter"
+          onchange="combinedFilter()"
+        >
           <option value="all">All</option>
           <option value="completed">Completed</option>
           <option value="pending">Pending</option>
+        </select>
+
+        <select
+          class="form-control"
+          id="priorityFilter"
+          onchange="combinedFilter()"
+        >
+          <option value="all">All Priorities</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
         </select>
       </div>
 
@@ -61,6 +87,7 @@
             <th>ID</th>
             <th>Title</th>
             <th>Description</th>
+            <th>Priority</th>
             <th>Status</th>
             <th>Action</th>
           </tr>
