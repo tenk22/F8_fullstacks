@@ -117,47 +117,10 @@ function handleTodo(event) {
   resetForm();
 }
 
-function searchTodo() {
+function combinedFilter() {
   const searchTerm = searchElement.value.toLowerCase();
-  const filteredTodos = todos.filter((todo) =>
-    todo.title.toLowerCase().includes(searchTerm)
-  );
-  renderTodos(filteredTodos);
-}
-
-function filterTodos() {
   const filterValue = filterElement.value;
-  if (filterValue === "all") {
-    renderTodos(todos);
-  } else {
-    const status = filterValue === "completed";
-    const filteredTodos = todos.filter((todo) => todo.status === status);
-    renderTodos(filteredTodos);
-  }
-}
-
-function sortTodosByPriority() {
-  const sortedTodos = [...todos].sort((a, b) => {
-    const priorities = { high: 1, medium: 2, low: 3 };
-    return priorities[a.priority] - priorities[b.priority];
-  });
-  renderTodos(sortedTodos);
-}
-
-function filterByPriority() {
   const priorityValue = priorityFilterElement.value;
-  if (priorityValue === "all") {
-    renderTodos(todos);
-  } else {
-    const filteredTodos = todos.filter(
-      (todo) => todo.priority === priorityValue
-    );
-    renderTodos(filteredTodos);
-  }
-}
-function filterTodos() {
-  const filterValue = filterElement.value;
-  const searchTerm = searchElement.value.toLowerCase();
 
   let filteredTodos = todos;
 
@@ -172,12 +135,13 @@ function filterTodos() {
     );
   }
 
-  renderTodos(filteredTodos);
-}
+  if (priorityValue !== "all") {
+    filteredTodos = filteredTodos.filter(
+      (todo) => todo.priority === priorityValue
+    );
+  }
 
-function combinedFilter() {
-  filterTodos();
-  filterByPriority();
+  renderTodos(filteredTodos);
 }
 
 function resetForm() {
@@ -190,3 +154,6 @@ function resetForm() {
 
 todoForm.addEventListener("submit", handleTodo);
 document.getElementById("reset-btn").addEventListener("click", resetForm);
+searchElement.addEventListener("input", combinedFilter);
+filterElement.addEventListener("change", combinedFilter);
+priorityFilterElement.addEventListener("change", combinedFilter);
