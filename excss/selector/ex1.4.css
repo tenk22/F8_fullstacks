@@ -1,9 +1,0 @@
-p ~ h2 {
-    color: aqua;
-}
-p ~ div h2 {
-    color: brown;
-}
-p + h2 { /* + là sau liền kề  */
-    color: blue;
-}

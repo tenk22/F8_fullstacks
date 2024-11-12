@@ -1,13 +1,19 @@
-import { getAll } from "./services.js";
-import { getParams, render } from "./utils.js";
+document.addEventListener("DOMContentLoaded", () => {
+  const categoriesContainer = document.querySelector(".product-categories");
 
-const categoryEle = document.getElementById("category");
-const title = document.getElementById("title");
-
-const param = getParams("category");
-title.innerText = `Top ${param}:`.toUpperCase();
-
-const { products } = await getAll(`products/category/${param}`);
-console.log(products);
-
-render(categoryEle, products);
+  fetch("http://localhost:3000/categories")
+    .then((response) => response.json())
+    .then((categories) => {
+      categoriesContainer.innerHTML = categories
+        .map(
+          (category) => `
+              <div class="category-card">
+                <a href="#"><img src="${category.image}" alt="${category.name}" /></a>
+                <h3><a href="#">${category.name}</a></h3>
+              </div>
+            `
+        )
+        .join("");
+    })
+    .catch((error) => console.error("Error fetching categories:", error));
+});
