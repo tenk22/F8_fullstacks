@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2000's Store</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -19,12 +19,11 @@
         </div>
         <div class="nav-links">
           <a href="#">Sản Phẩm</a>
-          <a href="product/Knits/Knits.html">Knits</a>
-          <a href="#">Accessories</a>
-          <a href="#">Footwear</a>
-          <a href="#">Giới Thiệu</a>
-          <a href="#">Tin Tức</a>
-          <a href="#">Liên Hệ</a>
+          <a href="./category.html?category=mens-shirts">Shirts</a>
+          <a href="./category.html?category=mens-shoes">Shoes</a>
+          <a href="./category.html?category=mens-watches">Watches</a>
+          <a href="./aboutme/about.html">Giới Thiệu</a>
+          <a href="./contact/contac.html">Liên Hệ</a>
         </div>
         <div class="nav-icons">
           <a href="#"><i class="fas fa-user"></i></a>
@@ -51,7 +50,7 @@
       <!-- new section 2 -->
       <section class="image-section">
         <div class="image-card">
-          <img src="img/banner-1.png" alt="The Original Organic" />
+          <img src="./assets/css/img/banner-1.png" alt="The Original Organic" />
           <div class="overlay">
             <h3>The Original Organic</h3>
             <p>
@@ -62,7 +61,7 @@
           </div>
         </div>
         <div class="image-card">
-          <img src="img/banner-2.png" alt="A Legend Rides Again" />
+          <img src="./assets/css/img/banner-2.png" alt="A Legend Rides Again" />
           <div class="overlay">
             <h3>A Legend Rides Again</h3>
             <p>
@@ -87,30 +86,6 @@
         </div>
       </section>
       <!-- new section 4 -->
-      <section class="product-categories"></section>
-
-      <div class="filters">
-        <select id="categoryFilter">
-          <option value="">Select Category</option>
-          <option value="Shirts">Shirts</option>
-          <option value="Knits">Knits</option>
-          <!-- Add more options as per db.json -->
-        </select>
-        <select id="brandFilter">
-          <option value="">Select Brand</option>
-          <option value="Brand A">Brand A</option>
-          <option value="Brand B">Brand B</option>
-        </select>
-        <select id="sortOptions">
-          <option value="">Sort By</option>
-          <option value="name-asc">Name (A-Z)</option>
-          <option value="name-desc">Name (Z-A)</option>
-          <option value="price-asc">Price (Low-High)</option>
-          <option value="price-desc">Price (High-Low)</option>
-        </select>
-      </div>
-
-      <section class="shop-product-list"></section>
     </main>
 
     <!-- Footer -->
@@ -134,13 +109,13 @@
         <div class="footer-center">
           <h3>Đường Dẫn</h3>
           <ul>
-            <li><a href="#">Về chúng tôi</a></li>
+            <li><a href="./aboutme/about.html">Về chúng tôi</a></li>
             <li><a href="#">Vận chuyển</a></li>
             <li><a href="#">Chính sách</a></li>
             <li><a href="#">Khuyến mãi</a></li>
             <li><a href="#">Hỗ trợ</a></li>
             <li><a href="#">Payment</a></li>
-            <li><a href="#">Liên hệ</a></li>
+            <li><a href="./contact/contac.html">Liên hệ</a></li>
           </ul>
         </div>
 
@@ -166,6 +141,6 @@
         </div>
       </div>
     </footer>
-    <script src="main.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
