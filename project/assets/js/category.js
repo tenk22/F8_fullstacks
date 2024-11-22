@@ -1,4 +1,4 @@
-import { getAll } from "./services.js";
+import { getAll } from "./service.js";
 import { getParams, render } from "./utils.js";
 
 const categoryEle = document.getElementById("category");

@@ -1,4 +1,4 @@
-import { getById } from "./services.js";
+import { getById } from "./service.js";
 import { getParams } from "./utils.js";
 
 const detailEle = document.getElementById("detail");
