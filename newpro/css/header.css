@@ -1,0 +1,67 @@
+/* Header container */
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Title */
+  header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  /* Navigation links */
+  header nav a {
+    margin: 0 15px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  header nav a:hover {
+    color: #2193b0;
+  }
+  
+  /* Icon for login */
+  header .login-icon {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  header .login-icon i {
+    margin-right: 5px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 20px;
+    }
+  
+    header h1 {
+      font-size: 20px;
+    }
+  
+    header nav {
+      margin-top: 10px;
+    }
+  
+    header nav a {
+      margin: 5px 0;
+    }
+  }
+  

@@ -1,0 +1,108 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Áo thun nam",
+        "category": "Shirts",
+        "brand": "Nike",
+        "price": 199000,
+        "discount": 20,
+        "image": "https://via.placeholder.com/150",
+        "description": "Áo thun nam Nike chất liệu cotton, phù hợp cho mọi mùa hè."
+      },
+      {
+        "id": 2,
+        "name": "Quần jeans nữ",
+        "category": "Bottoms",
+        "brand": "Levi's",
+        "price": 399000,
+        "discount": 10,
+        "image": "https://via.placeholder.com/150",
+        "description": "Quần jeans nữ Levi's, thiết kế trẻ trung, vừa vặn, thoải mái."
+      },
+      {
+        "id": 3,
+        "name": "Áo khoác thể thao",
+        "category": "Outerwear",
+        "brand": "Adidas",
+        "price": 799000,
+        "discount": 15,
+        "image": "https://via.placeholder.com/150",
+        "description": "Áo khoác thể thao Adidas giữ ấm hiệu quả, phong cách thể thao."
+      },
+      {
+        "id": 4,
+        "name": "Áo len nữ",
+        "category": "Knits",
+        "brand": "Zara",
+        "price": 299000,
+        "discount": 5,
+        "image": "https://via.placeholder.com/150",
+        "description": "Áo len nữ Zara, thiết kế mềm mại, nhẹ nhàng, dễ phối đồ."
+      },
+      {
+        "id": 5,
+        "name": "Giày thể thao nam",
+        "category": "Footwear",
+        "brand": "Puma",
+        "price": 899000,
+        "discount": 25,
+        "image": "https://via.placeholder.com/150",
+        "description": "Giày thể thao nam Puma, đế cao su bền bỉ, thích hợp cho thể thao."
+      },
+      {
+        "id": 6,
+        "name": "Túi xách nữ",
+        "category": "Accessories",
+        "brand": "Chanel",
+        "price": 599000,
+        "discount": 30,
+        "image": "https://via.placeholder.com/150",
+        "description": "Túi xách nữ Chanel sang trọng, chất liệu da cao cấp, thiết kế hiện đại."
+      }
+    ],
+    "categories": [
+      { "id": 1, "name": "Shirts" },
+      { "id": 2, "name": "Bottoms" },
+      { "id": 3, "name": "Outerwear" },
+      { "id": 4, "name": "Knits" },
+      { "id": 5, "name": "Footwear" },
+      { "id": 6, "name": "Accessories" }
+    ],
+    "users": [
+      {
+        "id": 1,
+        "username": "john_doe",
+        "password": "password123",
+        "email": "john@example.com",
+        "role": "customer",
+        "cart": [
+          { "productId": 1, "quantity": 2 },
+          { "productId": 5, "quantity": 1 }
+        ]
+      },
+      {
+        "id": 2,
+        "username": "admin_user",
+        "password": "admin123",
+        "email": "admin@example.com",
+        "role": "admin",
+        "cart": []
+      }
+    ],
+    "orders": [
+      {
+        "id": 1,
+        "userId": 1,
+        "totalPrice": 1297000,
+        "status": "Đang xử lý",
+        "items": [
+          { "productId": 1, "quantity": 2, "price": 199000 },
+          { "productId": 5, "quantity": 1, "price": 899000 }
+        ],
+        "orderDate": "2024-11-21",
+        "deliveryAddress": "123 Đường ABC, Quận 1, TP.HCM"
+      }
+    ]
+  }
+  

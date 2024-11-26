@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>2000'S</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="auth.html" class="login-icon" title="Login">
+          <i class="fas fa-user"></i>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Danh mục sản phẩm</h2>
+
+      <!-- Phần lọc sản phẩm -->
+      <div class="filters">
+        <h3>Lọc sản phẩm</h3>
+        <label for="price-filter">Lọc theo giá:</label>
+        <select id="price-filter">
+          <option value="0">Tất cả</option>
+          <option value="1">Dưới 200.000 VND</option>
+          <option value="2">200.000 VND - 500.000 VND</option>
+          <option value="3">Trên 500.000 VND</option>
+        </select>
+
+        <label for="sort-filter">Sắp xếp theo:</label>
+        <select id="sort-filter">
+          <option value="name-asc">Tên (A-Z)</option>
+          <option value="name-desc">Tên (Z-A)</option>
+          <option value="price-asc">Giá (Thấp - Cao)</option>
+          <option value="price-desc">Giá (Cao - Thấp)</option>
+        </select>
+      </div>
+
+      <!-- Phần tìm kiếm sản phẩm (di chuyển xuống dưới filters) -->
+      <div class="search-bar">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Tìm kiếm sản phẩm..."
+        />
+        <button id="search-btn"><i class="fas fa-search"></i> Tìm kiếm</button>
+      </div>
+
+      <h2>Sản phẩm</h2>
+      <div id="product-list">
+        <!-- Sản phẩm sẽ hiển thị ở đây -->
+      </div>
+    </main>
+
+    <!-- Liên kết file script.js -->
+    <script src="script.js"></script>
+  </body>
+</html>

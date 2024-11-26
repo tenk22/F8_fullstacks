@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="./css/register.css" />
+  </head>
+  <body>
+    <header>
+      <h1>2000'S</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="auth.html" class="login-icon" title="Login">
+          <i class="fas fa-user"></i>
+        </a>
+      </nav>
+    </header>
+    <div class="register-container">
+      <h1>ĐĂNG KÝ</h1>
+      <form class="register-form">
+        <input type="text" placeholder="Họ và tên *" required />
+        <input type="text" placeholder="Tài khoản *" required />
+        <input type="password" placeholder="Mật khẩu *" required />
+        <input type="password" placeholder="Xác nhận mật khẩu *" required />
+        <input type="email" placeholder="Email" />
+        <input type="text" placeholder="Số điện thoại *" />
+        <select required>
+          <option value="" disabled selected>-- Tỉnh thành --</option>
+          <option value="hanoi">Hà Nội</option>
+          <option value="hcm">TP Hồ Chí Minh</option>
+          <!-- Thêm các tỉnh thành khác -->
+        </select>
+        <select required>
+          <option value="" disabled selected>-- Quận huyện --</option>
+          <!-- Thêm các quận huyện -->
+        </select>
+        <select required>
+          <option value="" disabled selected>-- Phường xã --</option>
+          <!-- Thêm các phường xã -->
+        </select>
+        <input type="text" placeholder="Địa chỉ" />
+        <button type="submit" class="register-button">Đăng ký</button>
+      </form>
+      <div class="login-link">
+        Bạn đã có tài khoản? <a href="auth.html">Đăng nhập</a>
+      </div>
+    </div>
+  </body>
+</html>
