@@ -1,6 +1,12 @@
 import React from "react";
 
 const ProductList = ({ products }) => {
+  const [visibleProducts, setVisibleProducts] = useState(10);
+
+  const handleSeeMore = () => {
+    setVisibleProducts((prev) => prev + 10);
+  };
+
   return (
     <div className="product-list">
       {products.map((product) => (
@@ -11,6 +17,11 @@ const ProductList = ({ products }) => {
           <span>Price: ${product.price}</span>
         </div>
       ))}
+      {visibleProducts < products.length && (
+        <button className="see-more-btn" onClick={handleSeeMore}>
+          See more
+        </button>
+      )}
     </div>
   );
 };
